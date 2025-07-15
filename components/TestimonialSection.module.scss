@@ -1,0 +1,65 @@
+@import "./styles/_colors.scss";
+@import "./styles/_sizes.scss";
+
+.testimonialSection {
+  padding: 3rem 0 2rem 0;
+  background: $background;
+  border-radius: 16px;
+  margin: 2rem auto;
+  max-width: $container-max-width;
+  text-align: center;
+}
+
+.title {
+  font-size: 2rem;
+  color: $primary;
+  margin-bottom: 2rem;
+  font-weight: 700;
+}
+
+.testimonialsGrid {
+  display: flex;
+  gap: 2rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.testimonialCard {
+  background: #fff;
+  border: 1px solid $border;
+  border-radius: 12px;
+  padding: 2rem 1.5rem 1.5rem 1.5rem;
+  max-width: 300px;
+  min-width: 220px;
+  box-shadow: 0 2px 8px 0 rgba(0,0,0,0.05);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.testimonialCard:hover {
+  transform: translateY(-4px) scale(1.03);
+  box-shadow: 0 4px 16px 0 rgba(38,126,107,0.10);
+}
+
+.avatar {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  margin-bottom: 1rem;
+  border: 2px solid $primary;
+}
+
+.text {
+  color: $text;
+  font-size: 1.08rem;
+  margin-bottom: 1rem;
+  font-style: italic;
+}
+
+.name {
+  color: $secondary;
+  font-weight: 600;
+  font-size: 1rem;
+}

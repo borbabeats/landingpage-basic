@@ -1,0 +1,30 @@
+@import './styles/colors.scss';
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: $background;
+  padding: 1rem 2rem;
+  border-bottom: 1px solid $border;
+
+  .contact a {
+    color: $primary;
+    font-weight: bold;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 1.1rem;
+  }
+
+  .socials a {
+    color: $primary;
+    margin-left: 1rem;
+    font-size: 1.4rem;
+    transition: color 0.2s;
+    &:hover {
+      color: $secondary;
+    }
+  }
+}

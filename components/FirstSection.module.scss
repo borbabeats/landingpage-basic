@@ -1,0 +1,90 @@
+@import "./styles/_colors.scss";
+@import "./styles/_sizes.scss";
+
+.heroSection {
+  background: $background;
+  border-radius: 16px;
+  margin: 2rem auto 2.5rem auto;
+  padding: 2.5rem 0;
+  max-width: $container-max-width;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.heroContent {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 3rem;
+  width: 100%;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.textBlock {
+  flex: 1 1 320px;
+  text-align: left;
+}
+
+.title {
+  font-size: 2.5rem;
+  color: $primary;
+  font-weight: 800;
+  margin-bottom: 1.2rem;
+}
+
+.subtitle {
+  color: $text;
+  font-size: 1.25rem;
+  margin-bottom: 2rem;
+}
+
+.ctaButton {
+  display: inline-block;
+  padding: 1rem 2.5rem;
+  background: linear-gradient(90deg, $primary 0%, $secondary 100%);
+  color: #fff;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1.1rem;
+  box-shadow: 0 2px 8px 0 rgba(0,0,0,0.08);
+  transition: background 0.2s, transform 0.2s;
+}
+
+.ctaButton:hover {
+  background: linear-gradient(90deg, $secondary 0%, $primary 100%);
+  transform: translateY(-2px) scale(1.04);
+}
+
+.imageBlock {
+  flex: 1 1 300px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.heroImage {
+  width: 320px;
+  max-width: 100%;
+  border-radius: 12px;
+  box-shadow: 0 2px 12px 0 rgba(38,126,107,0.12);
+  object-fit: cover;
+}
+
+@media (max-width: 900px) {
+  .heroContent {
+    flex-direction: column-reverse;
+    gap: 2rem;
+    align-items: flex-start;
+  }
+  .imageBlock {
+    justify-content: flex-start;
+    margin-bottom: 1.5rem;
+  }
+  .heroImage {
+    width: 100%;
+    max-width: 340px;
+  }
+}

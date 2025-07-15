@@ -1,0 +1,46 @@
+@import "./styles/_colors.scss";
+@import "./styles/_sizes.scss";
+
+.aboutSection {
+  background: $background;
+  border-radius: 16px;
+  margin: 2rem auto;
+  padding: 3rem 0;
+  max-width: $container-max-width;
+}
+
+.contentWrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: center;
+  gap: 2.5rem;
+  flex-wrap: wrap;
+}
+
+.avatar {
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
+  border: 3px solid $primary;
+  object-fit: cover;
+  box-shadow: 0 2px 8px 0 rgba(38,126,107,0.08);
+}
+
+.textContent {
+  max-width: 100%;
+  text-align: left;
+}
+
+.title {
+  font-size: 2rem;
+  color: $primary;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.description {
+  color: $text;
+  font-size: 1.1rem;
+  line-height: 1.7;
+}
