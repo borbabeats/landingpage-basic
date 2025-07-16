@@ -6,17 +6,17 @@ const testimonials = [
   {
     name: "Ana Souza",
     text: "O atendimento foi excelente e superou minhas expectativas. Recomendo muito!",
-    avatar: "https://randomuser.me/api/portraits/women/44.jpg"
+    avatar: "https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e?auto=format&fit=facearea&w=256&h=256&facepad=2"
   },
   {
-    name: "Carlos Pereira",
+    name: "Carla Pereira",
     text: "Equipe muito profissional e atenciosa. Voltarei com certeza!",
-    avatar: "https://randomuser.me/api/portraits/men/32.jpg"
+    avatar: "https://images.unsplash.com/photo-1508214751196-bcfd4ca60f91?auto=format&fit=facearea&w=256&h=256&facepad=2"
   },
   {
     name: "Juliana Lima",
     text: "Serviço ágil, transparente e de alta qualidade. Fiquei muito satisfeita!",
-    avatar: "https://randomuser.me/api/portraits/women/65.jpg"
+    avatar: "https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=facearea&w=256&h=256&facepad=2"
   }
 ];
 

@@ -7,7 +7,7 @@ const AboutSection: React.FC = () => {
     <section className={styles.aboutSection}>
       <div className={styles.contentWrapper}>
         <Image
-          src="https://randomuser.me/api/portraits/men/11.jpg"
+          src="https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?auto=format&fit=facearea&w=256&h=256&facepad=2"
           alt="Psicólogo"
           className={styles.avatar}
           width={140}
