@@ -1,4 +1,5 @@
 import React from "react";
+import Image from "next/image";
 import styles from "./FirstSection.module.scss";
 
 const FirstSection: React.FC = () => {
@@ -17,7 +18,7 @@ const FirstSection: React.FC = () => {
           </a>
         </div>
         <div className={styles.imageBlock}>
-          <img src="https://images.unsplash.com/photo-1519125323398-675f0ddb6308?auto=format&fit=crop&w=600&q=80" alt="Psicólogo em atendimento" className={styles.heroImage} />
+          <Image width={320} height={320} src="https://images.unsplash.com/photo-1519125323398-675f0ddb6308?auto=format&fit=crop&w=600&q=80" alt="Psicólogo em atendimento" className={styles.heroImage} />
         </div>
       </div>
     </section>

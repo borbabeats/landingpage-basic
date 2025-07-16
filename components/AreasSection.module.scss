@@ -1,19 +1,20 @@
-@import "./styles/_colors.scss";
-@import "./styles/_sizes.scss";
+@use "./styles/_colors.scss" as colors;
+@use "./styles/_sizes.scss" as sizes;
+@use "./styles/_mixins.scss" as mixins;
+@use "./styles/_placeholders.scss" as placeholders;
 
 .areasSection {
-  background: $background;
+  background: colors.$background;
   border-radius: 16px;
-  margin: 2rem auto;
+  margin: 8rem auto;
   padding: 3rem 0 2rem 0;
-  max-width: $container-max-width;
+  max-width: sizes.$container-max-width;
   text-align: center;
 }
 
 .title {
-  font-size: 2rem;
-  color: $primary;
-  font-weight: 700;
+  @extend %section-title;
+  color: colors.$primary;
   margin-bottom: 2.5rem;
 }
 
@@ -25,39 +26,36 @@
 }
 
 .areaCard {
-  background: #fff;
-  border: 1px solid $border;
-  border-radius: 12px;
-  padding: 2rem 1.5rem 1.5rem 1.5rem;
+  @extend %card;
+  border: 1px solid colors.$border;
   max-width: 240px;
   min-width: 180px;
-  box-shadow: 0 2px 8px 0 rgba(0,0,0,0.05);
   display: flex;
   flex-direction: column;
   align-items: center;
-  transition: transform 0.2s, box-shadow 0.2s;
-}
+  @include mixins.transition(transform 0.2s, box-shadow 0.2s);
 
-.areaCard:hover {
-  transform: translateY(-4px) scale(1.03);
-  box-shadow: 0 4px 16px 0 rgba(38,126,107,0.10);
+  &:hover {
+    transform: translateY(-4px) scale(1.03);
+    @include mixins.card-hover-shadow;
+  }
 }
 
 .icon {
   font-size: 2.5rem;
-  color: $primary;
+  color: colors.$primary;
   margin-bottom: 1rem;
 }
 
 .areaTitle {
-  color: $secondary;
+  color: colors.$secondary;
   font-size: 1.15rem;
   font-weight: 600;
   margin-bottom: 0.5rem;
 }
 
 .areaDesc {
-  color: $text;
+  color: colors.$text;
   font-size: 1rem;
   line-height: 1.5;
 }

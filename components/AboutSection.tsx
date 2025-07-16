@@ -1,14 +1,17 @@
 import React from "react";
 import styles from "./AboutSection.module.scss";
+import Image from "next/image";
 
 const AboutSection: React.FC = () => {
   return (
     <section className={styles.aboutSection}>
       <div className={styles.contentWrapper}>
-        <img
-          src="https://randomuser.me/api/portraits/men/12.jpg"
+        <Image
+          src="https://randomuser.me/api/portraits/men/11.jpg"
           alt="Psicólogo"
           className={styles.avatar}
+          width={140}
+          height={140}
         />
         <div className={styles.textContent}>
           <h2 className={styles.title}>Sobre mim</h2>

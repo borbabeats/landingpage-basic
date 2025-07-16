@@ -9,9 +9,9 @@ const ScheduleSection: React.FC = () => {
       <p className={styles.description}>
         Entre em contato conosco e agende seu atendimento de forma rápida e fácil.
       </p>
-      <a href="#" className={styles.ctaButton}>
+      <Link href="#" className={styles.ctaButton}>
         Agendar Atendimento
-      </a>
+      </Link>
     </section>
   );
 };

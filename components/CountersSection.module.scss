@@ -1,12 +1,14 @@
-@import "./styles/_colors.scss";
-@import "./styles/_sizes.scss";
+@use "./styles/_colors.scss" as colors;
+@use "./styles/_sizes.scss" as sizes;
+@use "./styles/_mixins.scss" as mixins;
+@use "./styles/_placeholders.scss" as placeholders;
 
 .countersSection {
-  background: $background;
+  background: colors.$background;
   border-radius: 16px;
-  margin: 2rem auto;
+  margin: 8rem auto;
   padding: 2.5rem 0 1.5rem 0;
-  max-width: $container-max-width;
+  max-width: sizes.$container-max-width;
   box-shadow: 0 2px 16px 0 rgba(0,0,0,0.04);
   text-align: center;
 }
@@ -19,22 +21,23 @@
 }
 
 .counterCard {
-  padding: 2rem 2.5rem 1.5rem 2.5rem;
   min-width: 180px;
+  max-width: 240px;
   display: flex;
   flex-direction: column;
   align-items: center;
+  padding: 2rem 2.5rem 1.5rem 2.5rem;
 }
 
 .value {
   font-size: 2.5rem;
-  color: $primary;
+  color: colors.$primary;
   font-weight: 700;
   margin-bottom: 0.5rem;
 }
 
 .label {
-  color: $text;
+  color: colors.$text;
   font-size: 1.07rem;
   font-weight: 500;
 }

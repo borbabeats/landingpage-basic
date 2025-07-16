@@ -1,24 +1,23 @@
-@import "./styles/_colors.scss";
+@use "./styles/_colors.scss" as colors;
+@use "./styles/_placeholders.scss" as placeholders;
 
 .scheduleSection {
   padding: 3rem 0;
   text-align: center;
-  background: $background;
+  background: colors.$background;
   border-radius: 16px;
-  margin: 2rem auto;
+  margin: 8rem auto;
   max-width: 700px;
   box-shadow: 0 2px 16px 0 rgba(0,0,0,0.04);
 }
 
 .title {
-  font-size: 2rem;
-  color: $primary;
-  margin-bottom: 0.5rem;
-  font-weight: 700;
+  @extend %section-title;
+  color: colors.$primary;
 }
 
 .description {
-  color: $text;
+  color: colors.$text;
   font-size: 1.1rem;
   margin-bottom: 2rem;
 }
@@ -26,8 +25,8 @@
 .ctaButton {
   display: inline-block;
   padding: 1rem 2.5rem;
-  background: linear-gradient(90deg, $primary 0%, $secondary 100%);
-  color: $text;
+  background: linear-gradient(90deg, colors.$primary 0%, colors.$secondary 100%);
+  color: colors.$white;
   border-radius: 8px;
   text-decoration: none;
   font-weight: 600;
@@ -38,6 +37,6 @@
 }
 
 .ctaButton:hover {
-  background: linear-gradient(90deg, $secondary 0%, $primary 100%);
+  background: linear-gradient(90deg, colors.$secondary 0%, colors.$primary 100%);
   transform: translateY(-2px) scale(1.04);
 }

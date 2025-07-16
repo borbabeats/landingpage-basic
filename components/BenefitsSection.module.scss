@@ -1,24 +1,25 @@
-@import './styles/colors';
-@import './styles/sizes';
+@use './styles/colors' as colors;
+@use './styles/sizes' as sizes;
+@use './styles/mixins' as mixins;
+@use './styles/placeholders' as placeholders;
 
 .benefitsSection {
-  background: $background;
-  padding: 2.5rem 0;
+  background: colors.$background;
+  padding: 8rem 0;
 }
 
 .container {
-  max-width: $container-max-width;
+  max-width: sizes.$container-max-width;
   margin: 0 auto;
   width: 100%;
-  padding-left: $container-padding;
-  padding-right: $container-padding;
+  padding-left: sizes.$container-padding;
+  padding-right: sizes.$container-padding;
 }
 
 .title {
+  @extend %section-title;
   text-align: center;
-  color: $primary;
-  margin-bottom: 2rem;
-  font-size: 2rem;
+  color: colors.$primary;
 }
 
 .cards {
@@ -35,38 +36,36 @@
 }
 
 .card {
-  background: #fff;
-  border: 1px solid $border;
-  border-radius: 12px;
+  @extend %card;
+  border: 1px solid colors.$border;
   padding: 1.5rem 1rem;
-  box-shadow: 0 2px 8px rgba(38, 126, 107, 0.07);
   display: flex;
   flex-direction: column;
   align-items: center;
-  transition: box-shadow 0.2s;
+  @include mixins.transition(box-shadow 0.2s);
   text-align: center;
 
   &:hover {
-    box-shadow: 0 4px 16px rgba(38, 126, 107, 0.15);
-    border-color: $primary;
+    @include mixins.card-hover-shadow;
+    border-color: colors.$primary;
   }
 }
 
 .icon {
-  color: $primary;
+  color: colors.$primary;
   font-size: 2.2rem;
   margin-bottom: 0.8rem;
 }
 
 .cardTitle {
-  color: $primary;
+  color: colors.$primary;
   font-size: 1.15rem;
   font-weight: 700;
   margin-bottom: 0.5rem;
 }
 
 .cardDescription {
-  color: $text;
+  color: colors.$text;
   font-size: 1rem;
   line-height: 1.5;
 }

@@ -1,15 +1,17 @@
-@import './styles/colors.scss';
+@use './styles/colors.scss' as colors;
+@use './styles/mixins.scss' as mixins;
+@use './styles/placeholders.scss' as placeholders;
 
 .header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background: $background;
+  background: colors.$background;
   padding: 1rem 2rem;
-  border-bottom: 1px solid $border;
+  border-bottom: 1px solid colors.$border;
 
   .contact a {
-    color: $primary;
+    color: colors.$primary;
     font-weight: bold;
     text-decoration: none;
     display: flex;
@@ -19,12 +21,12 @@
   }
 
   .socials a {
-    color: $primary;
+    color: colors.$primary;
     margin-left: 1rem;
     font-size: 1.4rem;
     transition: color 0.2s;
     &:hover {
-      color: $secondary;
+      color: colors.$secondary;
     }
   }
 }

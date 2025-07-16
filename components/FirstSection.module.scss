@@ -1,16 +1,19 @@
-@import "./styles/_colors.scss";
-@import "./styles/_sizes.scss";
+@use "./styles/_colors.scss" as colors;
+@use "./styles/_sizes.scss" as sizes;
+@use "./styles/_placeholders.scss" as placeholders;
 
 .heroSection {
-  background: $background;
+  background: linear-gradient(135deg, rgba(colors.$primary, 0.13) 0%, rgba(colors.$secondary, 0.18) 100%), colors.$background;
   border-radius: 16px;
-  margin: 2rem auto 2.5rem auto;
-  padding: 2.5rem 0;
-  max-width: $container-max-width;
+  padding: 2.5rem sizes.$container-padding;
+  max-width: 1920px;
+  height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
+  box-shadow: 0 2px 16px 0 rgba(colors.$primary, 0.07);
 }
+
 
 .heroContent {
   display: flex;
@@ -28,14 +31,12 @@
 }
 
 .title {
-  font-size: 2.5rem;
-  color: $primary;
-  font-weight: 800;
-  margin-bottom: 1.2rem;
+  @extend %section-title;
+  color: colors.$primary;
 }
 
 .subtitle {
-  color: $text;
+  color: colors.$text;
   font-size: 1.25rem;
   margin-bottom: 2rem;
 }
@@ -43,7 +44,7 @@
 .ctaButton {
   display: inline-block;
   padding: 1rem 2.5rem;
-  background: linear-gradient(90deg, $primary 0%, $secondary 100%);
+  background: linear-gradient(90deg, colors.$primary 0%, colors.$secondary 100%);
   color: #fff;
   border-radius: 8px;
   text-decoration: none;
@@ -51,11 +52,11 @@
   font-size: 1.1rem;
   box-shadow: 0 2px 8px 0 rgba(0,0,0,0.08);
   transition: background 0.2s, transform 0.2s;
-}
 
-.ctaButton:hover {
-  background: linear-gradient(90deg, $secondary 0%, $primary 100%);
-  transform: translateY(-2px) scale(1.04);
+  &:hover {
+    background: linear-gradient(90deg, colors.$secondary 0%, colors.$primary 100%);
+    transform: translateY(-2px) scale(1.04);
+  }
 }
 
 .imageBlock {
@@ -82,9 +83,14 @@
   .imageBlock {
     justify-content: flex-start;
     margin-bottom: 1.5rem;
+    flex: 1 1 200px;
+    @media (max-width: 600px) {
+      margin-bottom: 0;
+    }
   }
   .heroImage {
     width: 100%;
     max-width: 340px;
+    height: auto;
   }
 }

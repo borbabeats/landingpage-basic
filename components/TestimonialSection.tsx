@@ -1,4 +1,5 @@
 import React from "react";
+import Image from "next/image";
 import styles from "./TestimonialSection.module.scss";
 
 const testimonials = [
@@ -26,7 +27,7 @@ const TestimonialSection: React.FC = () => {
       <div className={styles.testimonialsGrid}>
         {testimonials.map((t, idx) => (
           <div className={styles.testimonialCard} key={idx}>
-            <img src={t.avatar} alt={t.name} className={styles.avatar} />
+            <Image width={140} height={140} src={t.avatar} alt={t.name} className={styles.avatar} />
             <p className={styles.text}>&quot;{t.text}&quot;</p>
             <span className={styles.name}>{t.name}</span>
           </div>

@@ -1,0 +1,17 @@
+// Mixins reutilizáveis para todo o projeto
+
+@mixin card-shadow {
+  box-shadow: 0 2px 8px 0 rgba(0,0,0,0.05);
+}
+
+@mixin card-hover-shadow {
+  box-shadow: 0 4px 16px 0 rgba(38,126,107,0.10);
+}
+
+@mixin transition($args...) {
+  transition: $args;
+}
+
+@mixin gradient-bg($color1, $color2) {
+  background: linear-gradient(90deg, $color1 0%, $color2 100%);
+}

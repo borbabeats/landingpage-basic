@@ -32,19 +32,23 @@ function useCountUp(to: number, duration = 1200) {
   return count;
 }
 
+function CounterCard({ value, label }: { value: number; label: string }) {
+  const count = useCountUp(value);
+  return (
+    <div className={styles.counterCard}>
+      <span className={styles.value}>+{count}</span>
+      <span className={styles.label}>{label}</span>
+    </div>
+  );
+}
+
 const CountersSection: React.FC = () => {
   return (
     <section className={styles.countersSection}>
       <div className={styles.grid}>
-        {counters.map((c, idx) => {
-          const count = useCountUp(c.value);
-          return (
-            <div className={styles.counterCard} key={idx}>
-              <span className={styles.value}>+{count}</span>
-              <span className={styles.label}>{c.label}</span>
-            </div>
-          );
-        })}
+        {counters.map((c, idx) => (
+          <CounterCard key={idx} value={c.value} label={c.label} />
+        ))}
       </div>
     </section>
   );
