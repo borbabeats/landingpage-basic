@@ -1,36 +1,65 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Landing Page - Psicologia
 
-## Getting Started
+Este projeto é uma landing page desenvolvida com [Next.js](https://nextjs.org/) e React, voltada para consultório de psicologia.
 
-First, run the development server:
+## Como rodar o projeto
+
+1. Instale as dependências:
+
+```bash
+npm install
+```
+
+2. Rode o servidor de desenvolvimento:
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+3. Abra o navegador e acesse: [http://localhost:3000](http://localhost:3000)
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+---
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Estrutura de Pastas
 
-## Learn More
+```
+landing-page/
+├── components/
+│   ├── AboutSection.tsx
+│   ├── AreasSection.tsx
+│   ├── BenefitsSection.tsx
+│   ├── CountersSection.tsx
+│   ├── FirstSection.tsx
+│   ├── Footer.tsx
+│   ├── Header.tsx
+│   ├── ScheduleSection.tsx
+│   ├── TestimonialSection.tsx
+│   ├── styles/
+│   │   ├── _colors.scss
+│   │   ├── _mixins.scss
+│   │   ├── _placeholders.scss
+│   │   └── _sizes.scss
+├── public/
+│   └── (imagens e assets)
+├── src/
+│   └── app/
+│       ├── layout.tsx
+│       ├── page.tsx
+│       ├── globals.css
+│       └── page.module.css
+├── package.json
+├── tsconfig.json
+├── next.config.ts
+└── README.md
+```
 
-To learn more about Next.js, take a look at the following resources:
+---
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Observações
+- O projeto utiliza TypeScript e módulos SCSS para estilização.
+- Para deploy, recomenda-se o [Vercel](https://vercel.com/) ou outra plataforma compatível com Next.js.
+- Edite os componentes em `components/` para personalizar as seções da landing page.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+---
 
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Desenvolvido por borbabeats
